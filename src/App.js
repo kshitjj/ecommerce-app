@@ -1,23 +1,39 @@
-import logo from './logo.svg';
 import './App.css';
+
+function Header() {
+  return (
+    <div className="header" style={{}}>
+      <h1>Ecommerce App</h1>
+    </div>
+  )
+}
+
+function Item(props) {
+  return (
+    <div className="item">
+      <div className='itemName'>{props.name}</div>
+      <div className='itemPrice'>Price: {props.price}</div>
+      <div className='itemDescription'>Description: {props.description}</div>
+      <button className="addToCart" type='button'>Add to cart</button>
+    </div>
+  )
+}
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <div className="ItemContainer">
+        <Item name="Banana" price="50rs" description="This a yellow long thingy" />
+        <Item name="Banana" price="50rs" description="This a yellow long thingy" />
+        <Item name="Banana" price="50rs" description="This a yellow long thingy" />
+        <Item name="Banana" price="50rs" description="This a yellow long thingy" />
+        <Item name="Banana" price="50rs" description="This a yellow long thingy" />
+        <Item name="Banana" price="50rs" description="This a yellow long thingy" />
+        <Item name="Banana" price="50rs" description="This a yellow long thingy" />
+        <Item name="Banana" price="50rs" description="This a yellow long thingy" />
+        <Item name="Banana" price="50rs" description="This a yellow long thingy" />
+      </div>
     </div>
   );
 }
